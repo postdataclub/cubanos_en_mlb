@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cubanos en la MLB</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script  src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+	    window.jQuery || document.write('<script type="text/javascript" src="js/jquery.min.js"><\/script>')
+	</script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div id="principal-page" class="container" style="margin-top:30px">
+  <div id="news-list" class="row">
+
+  </div>
+</div>
+
+<div id="current-new" class="container" style="margin-top:8px;display:none">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#home">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page" id="nav-current">Library</li>
+    </ol>
+  </nav>
+  <div class="col"><h1 id="title-new" class="col header-news">Título</h1></div>
+    <div class="col">
+      <div class="row">
+          <p id="author-new" class="col">Author</p>
+          <p id="date-new" class="col text-right">Date</p>
+      </div>
+    </div>
+    <div id="text-new" class="col"></div>
+    <div class="col">
+      <p class=" auto-note text-right">Esta noticia fue generada automáticamente a partir de información extraida de <a href="https://baseball-reference.com">baseball-reference.com</a></p>
+    </div>
+    <div class="row">
+        <a id="yesterday-new" class="col"></a>
+        <a id="tomorrow-new" class="col text-right"></a>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<script type="text/javascript">
+	  $("#footer").load('footer.html');
+	  $("#navbar").load('navbar.html');
+</script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+</html>

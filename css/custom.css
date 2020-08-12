@@ -1,0 +1,83 @@
+.mb-my{
+    margin-bottom: 1rem !important;
+}
+a{
+    text-decoration: none !important;
+    color: #002C7C !important;
+}
+a:hover{
+    color: #0747D0 !important;
+}
+.header-news{
+ padding-left: 0px;
+ padding-right: 0px;
+}
+
+.auto-note {
+	font-size: 0.9rem;
+	font-style: italic;
+}
+
+.resume-card {
+	font-size: 19px;
+}
+
+.header-card {
+    font-weight: bold !important;
+}
+
+.author-name {
+    font-weight: bold !important;
+}
+
+.header-news{
+	color: #002C7C !important;
+}
+
+.copyright {
+	font-size: 21px;
+	font-weight: bold; 
+}
+
+#team-logos {
+  text-align: center;
+}
+
+.logo-matcom {
+  height: 50px;
+}
+
+.logo-pd {
+  height: 70px;
+}
+
+@media (max-width: 767px) {
+    .header-card{
+        font-size: 24px !important;
+    }
+    .header-news{
+        font-weight: bold !important;
+        font-size: 24px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .paragraph-new{
+        font-size: 1.1rem !important;
+    }
+    .header-news{
+        font-weight: bold !important;
+        font-size: 28px !important;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .header-news{
+        font-weight: bold !important;
+        font-size: 34px !important;
+    }
+    .paragraph-new{
+        font-size: 1.5rem !important;
+    }
+}
