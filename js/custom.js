@@ -227,6 +227,10 @@ function render_new(el){
         ye.show();
     }
     window.scrollTo(0,0);
+    var page_title = 'Cubanos en MLB - Resumen '+data.date;
+    var d_id = 'Resumen-'+data.date;
+    var d_url = 'http://www.postdata.club/cubanos_en_mlb/'+'#!'+data.date;
+    reset(d_id,d_url,page_title);
 
 };
 
