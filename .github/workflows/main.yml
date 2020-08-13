@@ -1,0 +1,38 @@
+on:
+
+  schedule:
+    - cron: '0 * * * *'
+
+  push:
+    branches-ignore:
+      - 'gh-pages'
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@master
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - uses: gia-uh/baseball_cubans_news_generation@master
+
+      - name: Update env var
+        uses: allenevans/set-env@v1.0.0
+        with:
+          UPDATED: python -c "import os;print(open('UPDATED').read());os.remove('UPDATED')"
+          overwrite: true
+
+      - name: deploy
+        if: ${{env.UPDATED==0}}
+        run: |
+          git config --global user.name 'Roberbg97'
+          git config --global user.email 'roberbg97@gmail.com'
+          git add .
+          git commit -am "Deploy apis"
+          git push -f --set-upstream origin master
