@@ -217,12 +217,12 @@ function render_new(el){
     tm.hide();
     ye.hide();
     if(data.index.next!==null){
-        tm.text('Resumen '+data.index.next);
+        tm.text('Resumen '+data.index.next+' >');
         tm.attr('href', '#'+data.index.next);
         tm.show();
     }
     if(data.index.prev!==null){
-        ye.text('Resumen '+data.index.prev);
+        ye.text('< Resumen '+data.index.prev);
         ye.attr('href', '#'+data.index.prev);
         ye.show();
     }
