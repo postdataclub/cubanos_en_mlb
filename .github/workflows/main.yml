@@ -1,7 +1,7 @@
 on:
 
   schedule:
-    - cron: '0 6-10 * * *'
+    - cron: '0 10-14 * * *'
 
   push:
     branches-ignore:
@@ -22,11 +22,8 @@ jobs:
 
       - uses: gia-uh/baseball_cubans_news_generation@master
 
-      - name: Update env var
-        uses: allenevans/set-env@v1.0.0
-        with:
-          UPDATED: python -c "import os;print(open('UPDATED').read());os.remove('UPDATED')"
-          overwrite: true
+      - name: Set env
+        run: echo ::set-env name=UPDATED::$(python -c "import os;print(open('UPDATED').read(),end='');os.remove('UPDATED')")
 
       - name: deploy
         if: ${{env.UPDATED==0}}
