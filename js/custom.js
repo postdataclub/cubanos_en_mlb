@@ -199,7 +199,7 @@ function render_new(el){
     let idd = $.manager.router.current_route;
     let data = $.manager.news._get_new(idd);
     el.find("p").remove(".paragraph-new");
-    el.find("#nav-current").text("Resumen "+data.date);
+    el.find("#nav-current").text("Jornada "+data.date);
     el.find("#title-new").text(data.title);
     el.find("#author-new").html('Por: <span class="author-name">'+data.author+'</span>');
     el.find("#date-new").text(data.date);
@@ -217,18 +217,18 @@ function render_new(el){
     tm.hide();
     ye.hide();
     if(data.index.next!==null){
-        tm.text('Resumen '+data.index.next+' >');
+        tm.text('Jornada '+data.index.next+' >');
         tm.attr('href', '#'+data.index.next);
         tm.show();
     }
     if(data.index.prev!==null){
-        ye.text('< Resumen '+data.index.prev);
+        ye.text('< Jornada '+data.index.prev);
         ye.attr('href', '#'+data.index.prev);
         ye.show();
     }
     window.scrollTo(0,0);
     var page_title = 'Cubanos en MLB - Resumen '+data.date;
-    var d_id = 'Resumen-'+data.date;
+    var d_id = 'Jornada-'+data.date;
     var d_url = 'http://www.postdata.club/cubanos_en_mlb/'+'#!'+data.date;
     reset(d_id,d_url,page_title);
 
