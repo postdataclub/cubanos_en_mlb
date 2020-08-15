@@ -13,6 +13,10 @@ a:hover{
  padding-right: 0px;
 }
 
+.banner-image {
+	width: 100%;	
+}
+
 #yesterday-new, #tomorrow-new {
 	font-size: 28px;
 	font-weight: bold;
@@ -56,20 +60,36 @@ a:hover{
   height: 70px;
 }
 
+.jumbotron {
+	background-image: url("images/Benner1.jpg");
+}
+
 @media (max-width: 767px) {
     .header-card{
-        font-size: 24px !important;
+        font-size: 19px !important;
     }
     .header-news{
         font-weight: bold !important;
-        font-size: 24px !important;
+        font-size: 19px !important;
     }
     
     #yesterday-new, #tomorrow-new {
 		font-size: 14px;
 		font-weight: bold;
 	}
+	
+	.resume-card {
+		font-size: 17px;
+	}
+	
+	.copyright {
+		font-size: 16px;
+		font-weight: bold; 
+	}
     
+    #current-new {
+		padding: 5px;
+    }
 }
 
 @media (min-width: 768px) {
