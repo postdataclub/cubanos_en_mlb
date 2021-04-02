@@ -23,7 +23,7 @@ jobs:
       - uses: gia-uh/baseball_cubans_news_generation@master
 
       - name: Set env
-        run: echo ::set-env name=UPDATED::$(python -c "import os;print(open('UPDATED').read(),end='');os.remove('UPDATED')")
+        run echo "name=UPDATED::$(python -c "import os;print(open('UPDATED').read(),end='');os.remove('UPDATED')")" >> $GITHUB_ENV
 
       - name: deploy
         if: ${{env.UPDATED==0}}
